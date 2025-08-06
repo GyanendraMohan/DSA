@@ -123,9 +123,19 @@ A comprehensive collection of Data Structures and Algorithms implemented in Java
 - **Space Complexity**: O(1)
 - **Algorithm**: Traverse array and count consecutive alternating even-odd pairs
 
+### 12. Maximum Circular SubArray Sum
+
+**File**: `MaximumCircularSubArraySum.java`
+
+- **Problem**: Find the maximum sum of subarray in a circular array (subarray can wrap around)
+- **Example**: `[5, -2, 3, 4]` → `10` (subarray: [3, 4, 5] wrapping around)
+- **Time Complexity**: O(n²) - Brute force approach trying all positions and lengths
+- **Space Complexity**: O(1)
+- **Algorithm**: For each starting position, try all possible circular subarray lengths using modulo indexing
+
 ## 🚀 Advanced Algorithms
 
-### 12. Stock Buy and Sell
+### 13. Stock Buy and Sell
 
 **File**: `StockBuyAndSell.java`
 
@@ -135,7 +145,7 @@ A comprehensive collection of Data Structures and Algorithms implemented in Java
 - **Space Complexity**: O(n) - Stack space for recursion
 - **Algorithm**: Recursive approach considering all possible buy-sell combinations
 
-### 13. Trapping Rain Water
+### 14. Trapping Rain Water
 
 **File**: `TrappingRainWater.java`
 
@@ -193,6 +203,10 @@ java MaximumSumSubArray
 # Run Longest Even-Odd SubArray
 javac LongestEvenOddSubArray.java
 java LongestEvenOddSubArray
+
+# Run Maximum Circular SubArray Sum
+javac MaximumCircularSubArraySum.java
+java MaximumCircularSubArraySum
 ```
 
 ## 📊 Algorithm Analysis
@@ -210,6 +224,7 @@ java LongestEvenOddSubArray
 | Remove Duplicates            | O(n)      | O(n)         | O(n)       | O(1)  |
 | Maximum Sum SubArray         | O(n²)     | O(n²)        | O(n²)      | O(1)  |
 | Longest Even-Odd SubArray    | O(n)      | O(n)         | O(n)       | O(1)  |
+| Maximum Circular SubArray    | O(n²)     | O(n²)        | O(n²)      | O(1)  |
 | Stock Buy and Sell           | O(n²)     | O(n²)        | O(n²)      | O(n)  |
 | Trapping Rain Water          | O(n)      | O(n)         | O(n)       | O(1)  |
 
