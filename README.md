@@ -155,6 +155,16 @@ A comprehensive collection of Data Structures and Algorithms implemented in Java
 - **Space Complexity**: O(1)
 - **Algorithm**: Two-pointer technique with left and right maximum tracking
 
+### 15. Majority Element in Array
+
+**File**: `MajorityElements.java`
+
+- **Problem**: Find the majority element in an array (an element that appears more than n/2 times)
+- **Example**: `[1, 2, 3, 3, 3, 4, 5, 6, 3, 3, 3]` → `3` (since 3 appears 6 times in an array of length 11)
+- **Time Complexity**: O(n) - Boyer-Moore Voting Algorithm
+- **Space Complexity**: O(1)
+- **Algorithm**: Uses the Boyer-Moore Voting Algorithm to find a candidate for the majority element and then verifies if it appears more than n/2 times
+
 ## 🛠️ Getting Started
 
 ### Prerequisites
@@ -227,6 +237,7 @@ java MaximumCircularSubArraySum
 | Maximum Circular SubArray    | O(n²)     | O(n²)        | O(n²)      | O(1)  |
 | Stock Buy and Sell           | O(n²)     | O(n²)        | O(n²)      | O(n)  |
 | Trapping Rain Water          | O(n)      | O(n)         | O(n)       | O(1)  |
+| Majority Element in Array    | O(n)      | O(n)         | O(n)       | O(1)  |
 
 ### Key Features
 
