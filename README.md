@@ -133,6 +133,26 @@ A comprehensive collection of Data Structures and Algorithms implemented in Java
 - **Space Complexity**: O(1)
 - **Algorithm**: For each starting position, try all possible circular subarray lengths using modulo indexing
 
+### 13. Sliding Window (Brute Force)
+
+**File**: `SlidingWindow.java`
+
+- **Problem**: Find the maximum sum of any consecutive subarray of size `k` in a given array.
+- **Example**: `[1, 8, 30, -5, 20, 7]`, `k = 3` → `45` (subarray: `[30, -5, 20]`)
+- **Time Complexity**: O(n \* k) - For each window, sum up k elements
+- **Space Complexity**: O(1)
+- **Algorithm**: For every possible window of size `k`, calculate the sum and keep track of the maximum.
+
+### 14. Sliding Window (Optimal)
+
+**File**: `OptimalSlidingWIndow.java`
+
+- **Problem**: Find the maximum sum of any consecutive subarray of size `k` in a given array using an optimized approach.
+- **Example**: `[1, 8, 30, -5, 20, 7]`, `k = 3` → `45` (subarray: `[30, -5, 20]`)
+- **Time Complexity**: O(n) - Each element is added and removed from the window once
+- **Space Complexity**: O(1)
+- **Algorithm**: Calculate the sum of the first window of size `k`. Then, for each subsequent window, subtract the element going out and add the new element coming in, updating the maximum sum as you go.
+
 ## 🚀 Advanced Algorithms
 
 ### 13. Stock Buy and Sell
@@ -232,6 +252,8 @@ java MaximumCircularSubArraySum
 | Maximum Difference           | O(n)      | O(n)         | O(n)       | O(1)  |
 | Move Zeros to End            | O(n)      | O(n)         | O(n)       | O(1)  |
 | Remove Duplicates            | O(n)      | O(n)         | O(n)       | O(1)  |
+| Sliding Window (Brute Force) | O(n\*k)   | O(n\*k)      | O(n\*k)    | O(1)  |
+| Sliding Window (Optimal)     | O(n)      | O(n)         | O(n)       | O(1)  |
 | Maximum Sum SubArray         | O(n²)     | O(n²)        | O(n²)      | O(1)  |
 | Longest Even-Odd SubArray    | O(n)      | O(n)         | O(n)       | O(1)  |
 | Maximum Circular SubArray    | O(n²)     | O(n²)        | O(n²)      | O(1)  |
