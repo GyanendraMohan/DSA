@@ -179,11 +179,38 @@ A comprehensive collection of Data Structures and Algorithms implemented in Java
 
 **File**: `MajorityElements.java`
 
-- **Problem**: Find the majority element in an array (an element that appears more than n/2 times)
+- **Problem**: Find the majority element in an array (an element that appears more than n/2 times).
 - **Example**: `[1, 2, 3, 3, 3, 4, 5, 6, 3, 3, 3]` → `3` (since 3 appears 6 times in an array of length 11)
 - **Time Complexity**: O(n) - Boyer-Moore Voting Algorithm
 - **Space Complexity**: O(1)
-- **Algorithm**: Uses the Boyer-Moore Voting Algorithm to find a candidate for the majority element and then verifies if it appears more than n/2 times
+- **Algorithm**:
+  1. **Candidate Selection**: Use the Boyer-Moore Voting Algorithm to find a candidate for the majority element by maintaining a count and a candidate variable.
+  2. **Verification**: After finding the candidate, verify if it actually appears more than n/2 times in the array.
+- **Edge Cases**: If no majority element exists, the algorithm should indicate so (e.g., return -1 or a message).
+
+**Sample Java Implementation:**
+
+```java
+public static int findMajorityElement(int[] arr) {
+    int count = 0, candidate = -1;
+    for (int num : arr) {
+        if (count == 0) {
+            candidate = num;
+            count = 1;
+        } else if (num == candidate) {
+            count++;
+        } else {
+            count--;
+        }
+    }
+    // Verify candidate
+    count = 0;
+    for (int num : arr) {
+        if (num == candidate) count++;
+    }
+    return (count > arr.length / 2) ? candidate : -1;
+}
+```
 
 ## 🛠️ Getting Started
 
