@@ -212,6 +212,33 @@ public static int findMajorityElement(int[] arr) {
 }
 ```
 
+### 16. Equilibrium Point
+
+**File**: `EquilibriumPoint.java`
+
+- **Problem**: Find the equilibrium point in an array (an index such that the sum of elements to the left is equal to the sum of elements to the right).
+- **Example**: `[3, 4, 8, -9, 20, 6]` → `4` (index 4, value 20, left sum = 6+4+8+(-9)=6, right sum = 6)
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+- **Algorithm**: Calculate the total sum of the array. Traverse the array, maintaining a left sum. For each index, check if left sum equals total sum minus left sum minus the current element. If so, that's the equilibrium point.
+
+**Sample Java Implementation:**
+
+```java
+public static int equilibriumPoint(int[] arr) {
+    int totalSum = 0;
+    for (int num : arr) totalSum += num;
+    int leftSum = 0;
+    for (int i = 0; i < arr.length; i++) {
+        if (leftSum == totalSum - leftSum - arr[i]) {
+            return i; // or i+1 for 1-based index
+        }
+        leftSum += arr[i];
+    }
+    return -1; // No equilibrium point
+}
+```
+
 ## 🛠️ Getting Started
 
 ### Prerequisites
@@ -287,6 +314,7 @@ java MaximumCircularSubArraySum
 | Stock Buy and Sell           | O(n²)     | O(n²)        | O(n²)      | O(n)  |
 | Trapping Rain Water          | O(n)      | O(n)         | O(n)       | O(1)  |
 | Majority Element in Array    | O(n)      | O(n)         | O(n)       | O(1)  |
+| Equilibrium Point            | O(n)      | O(n)         | O(n)       | O(1)  |
 
 ### Key Features
 
