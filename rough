@@ -1,0 +1,49 @@
+public class Rough {
+    public static void main(String[] args) {
+        // Example of nested non-correlated loops
+        for (int i = 0; i < n; i++) { // Outer loop (0 to 2)
+            System.out.println("Outer loop i = " + i);
+            for (int j = 10; j < n; j++) { // Inner loop (10 to 12), independent of i
+                System.out.println("    Inner loop j = " + j);
+            }
+        }
+    }
+}
+
+# Python example of nested non-correlated loops
+n = 5
+for i in range(n):  # Outer loop (0 to n-1)
+    print(f"Outer loop i = {i}")
+    for j in range(10, n + 10):  # Inner loop (10 to n+9), independent of i
+        print(f"    Inner loop j = {j}")
+
+f(n) = 10/n --> decrement fucntion 
+constant fucntion: 10, 50 
+logarithmic fucntion :logN
+10n == n
+n*n
+2^n
+
+inner loop depends on outer loop then it is called as correlated;
+
+for(int i = 0 ; i<= n ; i=i+5)
+
+i = 0 , 0+5 , 0+5+5 , ......... (K-1)*5
+
+k-1 * 5 = n
+ 
+O(n)
+
+10n^2+6
+
+O(n^2)
+
+for(int i = 1 ; i <= n ; i= i/2){
+    print;
+}
+
+i = 1 , 1/2 , 1/2^2......... 1/2^K
+
+1/2^k = n
+
+k = O(logn)
