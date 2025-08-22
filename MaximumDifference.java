@@ -31,3 +31,40 @@ public class MaximumDifference {
         return a > b ? a : b;
     }
 }
+
+// class Solution {
+// public int maxIndexDiff(int[] arr) {
+//     int n = arr.length;
+//     if (n < 2)
+//         return 0;
+
+//     int[] LMin = new int[n];
+//     int[] RMax = new int[n];
+
+//     // LMin[i] = min(arr[0..i])
+//     LMin[0] = arr[0];
+//     for (int i = 1; i < n; i++) {
+//         LMin[i] = Math.min(LMin[i - 1], arr[i]);
+//     }
+
+//     // RMax[j] = max(arr[j..n-1])
+//     RMax[n - 1] = arr[n - 1];
+//     for (int j = n - 2; j >= 0; j--) {
+//         RMax[j] = Math.max(RMax[j + 1], arr[j]);
+//     }
+
+//     // Two-pointer sweep to maximize (j - i) with LMin[i] < RMax[j]
+//     int i = 0, j = 0, maxDiff = 0;
+//     while (i < n && j < n) {
+//         if (LMin[i] < RMax[j]) {
+//             // valid pair -> try to increase j for a larger gap
+//             maxDiff = Math.max(maxDiff, j - i);
+//             j++;
+//         } else {
+//             // need a smaller left value -> move i
+//             i++;
+//         }
+//     }
+//     return maxDiff;
+// }
+// }
