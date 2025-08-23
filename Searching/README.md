@@ -22,9 +22,39 @@ Linear Search is the simplest searching algorithm. It checks every element in th
 
 ### Complexity Table
 
-| Algorithm     | Best Case | Average Case | Worst Case | Space Complexity |
-| ------------- | --------- | ------------ | ---------- | ---------------- |
-| Linear Search | O(1)      | O(n)         | O(n)       | O(1)             |
+| Algorithm               | Best Case | Average Case | Worst Case | Space Complexity |
+| ----------------------- | --------- | ------------ | ---------- | ---------------- |
+| Linear Search           | O(1)      | O(n)         | O(n)       | O(1)             |
+| Iterative Binary Search | O(1)      | O(log n)     | O(log n)   | O(1)             |
+
+---
+
+## 2. Iterative Binary Search
+
+Iterative Binary Search is an efficient algorithm for finding an element in a sorted array. It repeatedly divides the search interval in half, eliminating half of the remaining elements each time.
+
+### Theory (Logic Explanation)
+
+- The array must be sorted.
+- Set two pointers, `low` and `high`, at the start and end of the array.
+- While `low` is less than or equal to `high`:
+  - Calculate `mid = (low + high) / 2`.
+  - If `arr[mid]` equals the target, return `mid`.
+  - If `arr[mid]` is less than the target, set `low = mid + 1`.
+  - If `arr[mid]` is greater than the target, set `high = mid - 1`.
+- If the element is not found, return -1.
+
+### Explanation
+
+- Binary search works by repeatedly dividing the search interval in half.
+- If the value of the search key is less than the item in the middle, narrow the interval to the lower half. Otherwise, narrow it to the upper half.
+- Continue until the value is found or the interval is empty.
+
+### Complexity Table
+
+| Algorithm               | Best Case | Average Case | Worst Case | Space Complexity |
+| ----------------------- | --------- | ------------ | ---------- | ---------------- |
+| Iterative Binary Search | O(1)      | O(log n)     | O(log n)   | O(1)             |
 
 ---
 
