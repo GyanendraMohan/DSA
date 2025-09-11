@@ -239,6 +239,40 @@ public static int equilibriumPoint(int[] arr) {
 }
 ```
 
+### 17. Dutch National Flag Problem
+
+**File**: `DutchNationalFlag.java`
+
+- **Problem**: Sort an array containing only 0s, 1s, and 2s in-place so that all 0s come first, followed by all 1s, and then all 2s.
+- **Example**: `[2, 0, 2, 1, 1, 0]` → `[0, 0, 1, 1, 2, 2]`
+- **Time Complexity**: O(n) - Single pass with three pointers
+- **Space Complexity**: O(1) - In-place sorting
+- **Algorithm**: Use three pointers (low, mid, high) to partition the array into three sections:
+  - `low`: Points to the end of 0s section
+  - `mid`: Current element being processed
+  - `high`: Points to the start of 2s section
+- **Key Insight**: This is a variation of the partitioning algorithm used in quicksort, but with three partitions instead of two.
+
+**Sample Java Implementation:**
+
+```java
+public static void sortColors(int[] nums) {
+    int low = 0, mid = 0, high = nums.length - 1;
+    while (mid <= high) {
+        if (nums[mid] == 0) {
+            swap(nums, low, mid);
+            low++;
+            mid++;
+        } else if (nums[mid] == 1) {
+            mid++;
+        } else { // nums[mid] == 2
+            swap(nums, mid, high);
+            high--;
+        }
+    }
+}
+```
+
 ## 🛠️ Getting Started
 
 ### Prerequisites
@@ -314,6 +348,7 @@ java MaximumCircularSubArraySum
 | Stock Buy and Sell           | O(n²)     | O(n²)        | O(n²)      | O(n)  |
 | Trapping Rain Water          | O(n)      | O(n)         | O(n)       | O(1)  |
 | Majority Element in Array    | O(n)      | O(n)         | O(n)       | O(1)  |
+| Dutch National Flag          | O(n)      | O(n)         | O(n)       | O(1)  |
 | Equilibrium Point            | O(n)      | O(n)         | O(n)       | O(1)  |
 
 ### Key Features
