@@ -13,6 +13,12 @@ public class Main {
         System.out.println("Second Array: " + Arrays.toString(secondArray));
         Arrays.fill(secondArray, 5);
         System.out.println("Filled Second Array: " + Arrays.toString(secondArray));
+        
+        int[] thirdArray = getRandomArray(10);
+        System.out.println("Third Array: " + Arrays.toString(thirdArray));
+        
+        int[] fourthArray = Arrays.copyOf(thirdArray, thirdArray.length);
+        System.out.println("Copied Third Array: " + Arrays.toString(fourthArray));
     }
 
     private static int[] getRandomArray(int len) {
