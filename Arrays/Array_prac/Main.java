@@ -19,6 +19,13 @@ public class Main {
         
         int[] fourthArray = Arrays.copyOf(thirdArray, thirdArray.length);
         System.out.println("Copied Third Array: " + Arrays.toString(fourthArray));
+
+        String[] stringArray = {"apple", "banana", "cherry", "date"};
+        Arrays.sort(stringArray);
+        System.out.println("Sorted String Array: " + Arrays.toString(stringArray));
+        if(Arrays.binarySearch(stringArray, "apple") >= 0) {
+            System.out.println("Found 'apple' in the string array.");
+        }
     }
 
     private static int[] getRandomArray(int len) {
