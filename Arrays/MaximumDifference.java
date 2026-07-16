@@ -1,3 +1,5 @@
+package Arrays;
+
 // max value of arr[j]-arr[i] where j>i
 public class MaximumDifference {
     public static void main(String[] args) {

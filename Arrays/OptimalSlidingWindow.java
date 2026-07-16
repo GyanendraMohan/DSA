@@ -1,3 +1,5 @@
+package Arrays;
+
 public class OptimalSlidingWindow {
     public static void main(String[] args) {
         int[] arr = { 1, 8, 30, -5, 20, 7 };

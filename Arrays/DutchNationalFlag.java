@@ -1,3 +1,4 @@
+package Arrays;
 public class DutchNationalFlag {
     public static void main(String[] args) {
         // Test cases

@@ -1,3 +1,5 @@
+package Arrays;
+
 /**
  * Count frequency of elements in a sorted array
  * Time Complexity: O(n)

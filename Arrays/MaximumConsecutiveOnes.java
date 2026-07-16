@@ -1,3 +1,5 @@
+package Arrays;
+
 /**
  * MaximumConsecutiveOnes - Algorithm to find the maximum number of consecutive
  * 1s in a binary array

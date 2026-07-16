@@ -1,3 +1,5 @@
+package Arrays;
+
 /**
  * Efficient algorithm to move all zeros to the end of an array
  * while maintaining the relative order of non-zero elements

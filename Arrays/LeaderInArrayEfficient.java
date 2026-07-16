@@ -1,3 +1,5 @@
+package Arrays;
+
 public class LeaderInArrayEfficient {
     public static void main(String[] args) {
         int[] arr = { 7, 10, 4, 3, 10, 6, 5, 2 };

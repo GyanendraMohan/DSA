@@ -1,3 +1,5 @@
+package Arrays;
+
 public class TrappingRainWater {
     public static void main(String[] args) {
         int[] arr = { 3, 0, 1, 2, 5 };

@@ -1,3 +1,5 @@
+package Arrays;
+
 //minimum no of flips required to make all elements of binary array same.
 public class MinimumConsecutiveFlips {
     public static void main(String[] args) {

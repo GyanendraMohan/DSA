@@ -1,3 +1,5 @@
+package Arrays;
+
 public class StockBuyAndSell {
     public static void main(String[] args) {
         int[] arr = { 1, 5, 3, 8, 12 };

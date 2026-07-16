@@ -1,3 +1,5 @@
+package Arrays;
+
 public class OptimalSubarrayWithGivenSum {
     public static void main(String[] args) {
         int[] arr = { 1, 4, 20, 3, 10, 5 };
